@@ -1,0 +1,84 @@
+/*
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Kanit', sans-serif;
+50px margin / padding - viewport
+
+*/
+
+h1 {
+    //Art objects:
+    color: black;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+    font-size: 100px;
+}
+
+//menu, cart:
+
+
+
+//intro, about, featured, apol, hadr:
+#two {
+    display: flex;
+    flex-direction: row;
+
+    div {
+        display: flex;
+        flex-direction: column;
+
+        p {
+            text-transform: uppercase;
+            color: #000;
+
+        }
+
+        img {
+            width: 218.62px;
+            height: 302.57px;
+
+        }
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+
+        p {
+            text-transform: uppercase;
+            color: #000;
+
+        }
+
+        img {
+            width: 482.54px;
+            height: 578.96px;
+
+        }
+    }
+}
+
+.section-name {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: black;
+}
+
+.text-body {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: black;
+}
+
+.about-text {}
+
+//about, featured, view all objects, drag:
+
+.first-row-container {
+    background-color: blue;
+    margin: 0 50px;
+    height: 100px;
+    width: auto;
+}
