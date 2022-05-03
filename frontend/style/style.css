@@ -71,9 +71,23 @@ h1 {
 
 .text-body {
   font-family: 'Kanit', sans-serif;
-  font-weight: 500;
-  font-size: 40px;
+  font-weight: 300;
+  font-size: 65px;
+  line-height: 71px;
   color: black;
+  letter-spacing: 0.8px;
+}
+
+.first-line {
+  margin-left: 280px;
+}
+
+.about-title {
+  position: absolute;
+  display: inline-block;
+  letter-spacing: 0.8px;
+  opacity: 0.5;
+  margin-top: 10px;
 }
 
 .first-row-container {
