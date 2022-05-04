@@ -8,7 +8,7 @@ const animationComponent = function countingUp() {
  }
  window.cntr=0; 
 
-
+        
 /* // insert the loading animation of the HTML
 const animationComponent = function () {
     return`

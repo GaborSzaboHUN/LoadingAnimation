@@ -2,6 +2,7 @@
 /*
 font-family: 'Cormorant Garamond', serif;
 font-family: 'Kanit', sans-serif;
+font-family: 'Noto Serif Display', serif;
 font-family: 'Quicksand', sans-serif;
 50px -->60px!!! margin / padding - viewport 
 
@@ -9,6 +10,44 @@ font-family: 'Quicksand', sans-serif;
 body {
   background-color: #f3eeea;
 }
+.animation-container{
+  display: flex;
+  height: 100vh;
+  background-color: black;
+  
+  padding:60px;
+  z-index: 200;
+}
+.animation-container>div:first-child{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.animation-container>div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 25px;
+  transform: scaleY(0.8);
+
+  margin: 0 30px;
+}
+
+#to100 {
+  color: white;
+  font-family: 'Noto Serif Display', serif;
+  font-weight: 200;
+  font-size: 150px;
+}
+
 
 .section-name {
   font-family: 'Kanit', sans-serif;
@@ -54,7 +93,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 1;
 }
 
 .section-name.menu {
@@ -140,6 +179,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  
 }
 
 #two .left {
@@ -157,14 +197,22 @@ body {
   margin-left: 60px;
 }
 
-#two .left p {
+#two .left h2 {
   margin-bottom: 10px;
 }
 
 #two .left img {
   width: 400px;
   height: 552px;
+
   /* 1.38 keparany */
+/*   
+  @media (max-width:400px) {};
+
+  @media (min-width:401px) and (max-width:800px) {}
+
+  @media (min-width: 801px) {}
+ */
 }
 
 #two .right {
@@ -180,20 +228,25 @@ body {
           align-items: flex-start;
 
   margin-right: 60px;
-  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
-#two .right p {
+#two .right h2 {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  /*margin-left: -80px;
-  padding-left: 80px;*/
+                  
 }
 
 #two .right img {
   width: 840px;
   height: 1008px;
   /* 1.2 keparany */
+  @media (max-width:400px) {}
+
+  @media (min-width:401px) and (max-width:800px) {}
+
+  @media (min-width: 801px) {}
+
 }
 
 #three {
