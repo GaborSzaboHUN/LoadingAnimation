@@ -38,10 +38,9 @@ const footerComponent = function () {
 }
 
 const loadEvent = function () {
-    const to100Element = document.getElementById("to100");
     const rootElement = document.getElementById("root");
 
-    to100Element.insertAdjacentHTML("beforebegin", animationComponent());
+    animationComponent();
     rootElement.insertAdjacentHTML("afterbegin", headerComponent());
     rootElement.insertAdjacentHTML("afterbegin", sectionComponent());
     rootElement.insertAdjacentHTML("afterbegin", footerComponent());
