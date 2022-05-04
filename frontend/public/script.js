@@ -1,9 +1,20 @@
-// insert the loading animation of the HTML
+const animationComponent = function countingUp() {
+    document.getElementById("to100").innerHTML=window.cntr;
+   if (window.cntr<100) {
+       window.cntr++;
+       setTimeout(function(){countingUp();},45);
+   } else {
+   }
+ }
+ window.cntr=0; 
+
+
+/* // insert the loading animation of the HTML
 const animationComponent = function () {
     return`
     
     `
-}
+} */
 
  // insert the header of the HTML
  const headerComponent = function () {
@@ -27,9 +38,10 @@ const animationComponent = function () {
  }
 
  const loadEvent = function () {
-     const rootElement = document.getElementById("root")
+     const to100Element = document.getElementById("to100");
+     const rootElement = document.getElementById("root");
 
-     rootElement.insertAdjacentHTML( "beforebegin", animationComponent() );
+     to100Element.insertAdjacentHTML( "beforebegin", animationComponent() );
      rootElement.insertAdjacentHTML( "afterbegin", headerComponent() );
      rootElement.insertAdjacentHTML( "afterbegin", sectionComponent() );
      rootElement.insertAdjacentHTML( "afterbegin", footerComponent() );

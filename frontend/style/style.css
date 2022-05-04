@@ -2,15 +2,136 @@
 /*
 font-family: 'Cormorant Garamond', serif;
 font-family: 'Kanit', sans-serif;
-50px margin / padding - viewport
+font-family: 'Quicksand', sans-serif;
+50px -->60px!!! margin / padding - viewport 
 
 */
-h1 {
+body {
+  background-color: #f3eeea;
+}
+
+.section-name {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: black;
+  transform: scaleY(0.8);
+}
+        
+.underline::after {
+  content: '';
+  height: .1px;
+  width: 0%;
+  background-color: black;
+  display: block;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.underline:hover::after {
+  content: '';
+  height: .1px;
+  width: 100%;
+  background-color: black;
+  display: block;
+}
+
+.text-body {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  color: black;
+}
+/* ------ 1st viewport - the menu ------*/
+
+.menu-row-container {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.section-name.menu {
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.section-name.menu-owner {
+  font-size: 2rem;
+  letter-spacing: 4px;
+}
+
+.menu-screen {
+  position: relative;
+  height: 100vh;
+  padding: 50px 60px 118px;
+}
+
+.menu-screen .art-objects {
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.menu-screen .art-objects h1 {
+  text-align: center;
   color: black;
   font-family: 'Kanit', sans-serif;
-  font-weight: 700;
-  font-size: 100px;
+  font-weight: 400;
+  font-size: 20vw;
+  line-height: 80%;
 }
+
+.menu-screen .left-column-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 380px;
+  width: 300px;
+  margin-top: 50px;
+}
+
+.menu-screen .left-column-container a.side-list {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 5px;
+}
+
+.menu-screen .menu-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 70px;
+  width: 300px;
+}
+
+.menu-screen .menu-bottom a img {
+  height: 15px;
+  margin: 0 60px 0 0;
+}
+
+/* ------ 2nd viewport - Images (Gergő) ------*/
 
 #two {
   display: -webkit-box;
@@ -19,7 +140,6 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0;
 }
 
 #two .left {
@@ -33,6 +153,8 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  
+  margin-left: 60px;
 }
 
 #two .left p {
@@ -42,6 +164,7 @@ h1 {
 #two .left img {
   width: 400px;
   height: 552px;
+  /* 1.38 keparany */
 }
 
 #two .right {
@@ -55,41 +178,39 @@ h1 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+
+  margin-right: 60px;
+  margin-bottom: 0;
 }
 
 #two .right p {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  margin-left: -60px;
-  padding-left: 55px;
+  /*margin-left: -80px;
+  padding-left: 80px;*/
 }
 
 #two .right img {
   width: 840px;
   height: 1008px;
+  /* 1.2 keparany */
 }
 
-.section-name {
-  font-family: 'Kanit', sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 16px;
-  color: black;
-  -webkit-transform: scaleY(0.8);
-          transform: scaleY(0.8);
+#three {
+  margin-left: 60px
 }
 
-.text-body {
+.about-text {
   font-family: 'Kanit', sans-serif;
   font-weight: 300;
-  font-size: 80px;
-  line-height: 75px;
+  font-size: 65px;
+  line-height: 65px;
   color: black;
   letter-spacing: 0.8px;
 }
 
 .first-line {
-  margin-left: 280px;
+  margin-left: 300px;
 }
 
 .about-title {
@@ -98,6 +219,7 @@ h1 {
   letter-spacing: 0.8px;
   opacity: 0.5;
   margin-top: 10px;
+  margin-left: 5px;
 }
 
 /* Az alábbit valamiért nem vette be.
