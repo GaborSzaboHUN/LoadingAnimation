@@ -1,19 +1,134 @@
 /*
 font-family: 'Cormorant Garamond', serif;
 font-family: 'Kanit', sans-serif;
-50px margin / padding - viewport
+font-family: 'Quicksand', sans-serif;
+50px -->60px!!! margin / padding - viewport 
 
 */
 
-h1 {
-    //Art objects:
-    color: black;
-    font-family: 'Kanit', sans-serif;
-    font-weight: 700;
-    font-size: 100px;
+
+// ------ Basic formatting
+
+body {
+    background-color: #f3eeea;
 }
 
-//menu, cart:
+.section-name {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 18px; // méretváltozás
+    letter-spacing: 1px; // extra paraméter
+    color: black;
+}
+
+.section-name::after {
+    content: '';
+    height: .3px;
+    width: 0%;
+    background-color: black;
+    display: block;
+    transition: .5s ease-in-out;
+}
+
+.section-name:hover::after {
+    content: '';
+    height: .3px;
+    width: 100%;
+    background-color: black;
+    display: block;
+}
+
+.text-body {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: black;
+}
+
+//Art objects:
+
+
+
+// ------ 1st viewport - the menu (Gábor):
+
+.menu-screen {
+    position: relative;
+    height: 100vh;
+
+    margin: 50px 60px 118px;
+
+    .art-objects {
+        position: absolute;
+        left: 50%;
+        top: 54%;
+        transform: translate(-50%, -50%);
+
+        h1 {
+            text-align: center;
+            color: black;
+            font-family: 'Kanit', sans-serif;
+            font-weight: 400;
+            font-size: 20vw;
+            line-height: 80%;
+        }
+    }
+
+    .menu-row-container {
+        position: sticky;
+        top: 50px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        z-index: 100;
+
+
+        .menu {
+            font-size: 27px;
+            font-weight: 400;
+        }
+
+        .menu-owner {
+            font-size: 2rem; //31px
+            letter-spacing: 4px;
+        }
+    }
+
+    .left-column-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        height: 380px;
+        width: 300px;
+
+        margin-top: 50px;
+
+        a.side-list {
+            display: block;
+            width: max-content;
+            margin-bottom: 5px;
+        }
+    }
+
+    .menu-bottom {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 70px;
+        width: 300px;
+
+        a {
+            img {
+                height: 15px;
+                margin: 0 60px 0 0;
+            }
+        }
+    }
+
+}
 
 
 
@@ -57,28 +172,7 @@ h1 {
     }
 }
 
-.section-name {
-    font-family: 'Kanit', sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: black;
-}
-
-.text-body {
-    font-family: 'Kanit', sans-serif;
-    font-weight: 500;
-    font-size: 40px;
-    color: black;
-}
 
 .about-text {}
 
 //about, featured, view all objects, drag:
-
-.first-row-container {
-    background-color: blue;
-    margin: 0 50px;
-    height: 100px;
-    width: auto;
-}
