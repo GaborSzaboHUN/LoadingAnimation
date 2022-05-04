@@ -20,38 +20,60 @@ h1 {
 //intro, about, featured, apol, hadr:
 #two {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
 
-    div {
+    margin: 0;
+
+    .left {
         display: flex;
         flex-direction: column;
+        justify-content: center;
 
-        p {
-            text-transform: uppercase;
-            color: #000;
-
+        p{
+            margin-bottom: 10px;
         }
 
         img {
-            width: 218.62px;
-            height: 302.57px;
+            width: 400px;
+            height: 552px;
+            // 1.38
+            @media (max-width:400px){
 
+            }
+            @media (min-width:401px) and (max-width:800px) {
+
+            }
+            @media (min-width: 801px)
         }
     }
 
-    div {
+    .right {
         display: flex;
-        flex-direction: row;
+        flex-direction: column-reverse;
+        align-items: flex-start;
 
         p {
-            text-transform: uppercase;
-            color: #000;
+            transform: rotate(-90deg);
 
+            margin-left: -60px;
+
+            padding-left: 55px;
         }
 
         img {
-            width: 482.54px;
-            height: 578.96px;
+            width: 840px;
+            height: 1008px;
+            // 1.2
+            @media (max-width:400px){
+
+            }
+            @media (min-width:401px) and (max-width:800px) {
+
+            }
+            @media (min-width: 801px) {
+
+            }
+            cursor: none;
 
         }
     }
@@ -97,7 +119,6 @@ h1 {
 
 .first-row-container {
     background-color: blue;
-    margin: 0 50px;
     height: 100px;
     width: auto;
 }
