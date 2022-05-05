@@ -172,13 +172,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  mix-blend-mode: color-burn;
   z-index: 1;
 }
 
 .menu {
   font-size: 1.9vw;
   font-weight: 400;
-  mix-blend-mode:hue;
 }
 
 .menu-owner {
@@ -189,7 +189,7 @@ body {
 
 .menu-screen {
   position: relative;
-  height: 100vh;
+  height: 56.25vw;
   padding: 50px 60px;
 }
 
@@ -201,10 +201,6 @@ body {
   text-align: center;
   color: black;
   font-family: 'Kanit', sans-serif;
-
-}
-
-.art-objects{
   overflow: hidden;
 }
 
@@ -234,10 +230,10 @@ body {
 }
 
 .left-column-container {
+  position: absolute;
+  top: 10vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 250px;
   width: 300px;
   margin-top: 50px;
 }
@@ -248,8 +244,6 @@ body {
 
 a.side-list {
   display: block;
-  overflow: hidden;
-
   width: max-content;
   margin-bottom: 3px;
 
@@ -269,7 +263,7 @@ a.side-list {
 
 @keyframes fadeUp-sideList {
   0%{
-    transform: translateY(16px);
+    transform: translateY(12px);
   }
 
   100%{
@@ -305,15 +299,18 @@ a.side-list {
 #two {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
-  height: 100vh;
-  margin: 0 60px;
+  padding: 0 60px;
 }
 
 #two .left {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 30%;
+
+  margin-right: 70px;
 }
 
 #two .left h2 {
@@ -332,6 +329,8 @@ a.side-list {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+
+  width: 70%;
 }
 
 
@@ -348,9 +347,10 @@ a.side-list {
  width: 100%;
 }
 
+/* ------ 3rd viewport - Text ------  */
+
 #three {
-  margin-left: 60px;
-  margin-top: 120px;
+  margin: 100px 60px;
 }
 
 .about-text {
@@ -358,12 +358,14 @@ a.side-list {
   font-weight: 300;
   color: black;
   letter-spacing: 0.8px;
-  font-size: 65px;
-  line-height: 65px;
+  font-size: 4vw;
+  line-height: 4.5vw;
+
+  max-width: 75vw;
 }
 
 .first-line {
-      margin-left: 580px;
+  margin-left: 20vw;
 }
 
 .about-title {
@@ -371,18 +373,60 @@ a.side-list {
     display: inline-block;
     letter-spacing: 0.8px;
     opacity: 0.5;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 5px;
+    font-size: 1vw;
+    line-height: 1vw;
 }
 
-/* Az alábbit valamiért nem vette be.
-#three span {
-    overflow: hidden;
-    transform: translateY(10%);
-}*/
 .first-row-container {
   background-color: blue;
   height: 100px;
   width: auto;
 }
 /*# sourceMappingURL=style.css.map */
+
+.about-text span{
+  display: block;
+  animation: fadeUp-text .3s cubic-bezier(0.12, 0, 0.47, 1) both;
+}
+
+p.about-text span:nth-child(1) {
+  animation-delay: .1s;
+}
+p.about-text span:nth-child(2) {
+  animation-delay: .2s;
+}
+p.about-text span:nth-child(3) {
+  animation-delay: .3s;
+}
+p.about-text span:nth-child(4) {
+  animation-delay: .4s;
+} 
+p.about-text span:nth-child(5) {
+  animation-delay: .5s;
+}
+p.about-text span:nth-child(6) {
+  animation-delay: .6s;
+}
+p.about-text span:nth-child(7) {
+  animation-delay: .7s;
+}
+p.about-text span:nth-child(8) {
+  animation-delay: .8s;
+}
+p.about-text span:last-child {
+  animation-delay: .9s;
+}
+
+@keyframes fadeUp-text {
+  0%{
+    transform: translateY(15px);
+    opacity: 0;
+  }
+
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
