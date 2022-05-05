@@ -1,5 +1,5 @@
 const animationComponent = function countingUp() {
-    document.getElementById("to100").innerHTML=window.cntr;
+    document.getElementById("to100-counter").innerHTML=window.cntr;
    if (window.cntr<100) {
        window.cntr++;
        setTimeout(function(){countingUp();},45);
@@ -38,10 +38,11 @@ const animationComponent = function () {
  }
 
  const loadEvent = function () {
-     const to100Element = document.getElementById("to100");
+     /*const to100Element = document.getElementById("to100"); ez nem kell*/
      const rootElement = document.getElementById("root");
 
-     to100Element.insertAdjacentHTML( "beforebegin", animationComponent() );
+     /*to100Element.insertAdjacentHTML( "beforebegin", animationComponent() ); ez sem kell*/
+     animationComponent();
      rootElement.insertAdjacentHTML( "afterbegin", headerComponent() );
      rootElement.insertAdjacentHTML( "afterbegin", sectionComponent() );
      rootElement.insertAdjacentHTML( "afterbegin", footerComponent() );
