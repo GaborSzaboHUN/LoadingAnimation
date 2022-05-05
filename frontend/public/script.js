@@ -8,12 +8,25 @@ const animationComponent = function countingUp() {
 }
 window.cntr = 0;
 
+window.setTimeout("closeto100();", 6000);
+
+function closeto100() {
+    document.getElementById("to100").style.display = " none";
+}
+
+/* let mouseCursor = document.querySelector('.cursor');
+
+ window.addEventListener('mousemove',cursor)
+
+ function cursor(e){
+     console.log(e);
+ } */
 
 /* // insert the loading animation of the HTML
 const animationComponent = function () {
-    return`
-    
-    `
+return`
+ 
+`
 } */
 
 // insert the header of the HTML
@@ -38,8 +51,10 @@ const footerComponent = function () {
 }
 
 const loadEvent = function () {
+    /*const to100Element = document.getElementById("to100"); ez nem kell*/
     const rootElement = document.getElementById("root");
 
+    /*to100Element.insertAdjacentHTML( "beforebegin", animationComponent() ); ez sem kell*/
     animationComponent();
     rootElement.insertAdjacentHTML("afterbegin", headerComponent());
     rootElement.insertAdjacentHTML("afterbegin", sectionComponent());
