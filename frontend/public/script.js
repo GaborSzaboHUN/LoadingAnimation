@@ -65,7 +65,7 @@ return`
 } */
 
 // insert the header of the HTML
-const animationSectionomponent = function () {
+const animationSectionComponent = function () {
     return `
     <div class="cursor"></div>
 	<!--Loading(Niki)-->
@@ -163,7 +163,7 @@ const loadEvent = function () {
 
     /*to100Element.insertAdjacentHTML( "beforebegin", animationComponent() ); ez sem kell*/
     
-    rootElement.insertAdjacentHTML("beforeend", animationSectionomponent());
+    rootElement.insertAdjacentHTML("beforeend", animationSectionComponent());
     rootElement.insertAdjacentHTML("beforeend", firstSectionComponent());
     rootElement.insertAdjacentHTML("beforeend", secondSectionComponent());
     rootElement.insertAdjacentHTML("beforeend", thirdSectionComponent());
