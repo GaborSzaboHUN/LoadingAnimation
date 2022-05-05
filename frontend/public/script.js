@@ -12,9 +12,51 @@ window.setTimeout("closeto100();", 6000);
 
 function closeto100() {
     document.getElementById("to100").style.display = " none";
-
-    /*document.getElementById("to100").classList.add('hide')*/
 }
+
+// Mouse pointer setup:
+
+function cursorHandler() {
+
+    let mouseCursor = document.querySelector(".cursor");
+    let mouseTarget = document.querySelectorAll(".menu");
+    function cursor(e) {
+        //console.log(e.target);//
+        mouseCursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    }
+    window.addEventListener("mousemove", cursor);
+}
+
+
+//akkor induljon az animáció, ha odascrolloztunk:
+
+function scrollmanagingthree() {
+    let three = document.getElementById("three")
+
+    let onscroll3 = function () {
+        let viewportBottom = window.scrollY + window.innerHeight
+
+        if (three.offsetTop + 400 < viewportBottom) {
+            three.classList.add("running")
+        }
+    }
+    document.addEventListener('scroll', onscroll3);
+}
+
+function scrollmanagingtwo() {
+    let two = document.getElementById("two")
+
+    let onscroll3 = function () {
+        let viewportBottom = window.scrollY + window.innerHeight
+
+        if (two.offsetTop + 500 < viewportBottom) {
+            two.classList.add("running")
+        }
+    }
+    document.addEventListener('scroll', onscroll3);
+}
+
+
 
 /* let mouseCursor = document.querySelector('.cursor');
 
@@ -58,10 +100,15 @@ const loadEvent = function () {
 
     /*to100Element.insertAdjacentHTML( "beforebegin", animationComponent() ); ez sem kell*/
     animationComponent();
+
     rootElement.insertAdjacentHTML("afterbegin", headerComponent());
     rootElement.insertAdjacentHTML("afterbegin", sectionComponent());
     rootElement.insertAdjacentHTML("afterbegin", footerComponent());
 
+    cursorHandler();
+
+    scrollmanagingtwo()
+    scrollmanagingthree();
 }
 
 window.addEventListener("load", loadEvent)
