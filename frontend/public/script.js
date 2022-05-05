@@ -8,8 +8,21 @@ const animationComponent = function countingUp() {
  }
  window.cntr=0; 
 
-        
-/* // insert the loading animation of the HTML
+ window.setTimeout("closeto100();", 6000);
+
+ function closeto100(){
+ document.getElementById("to100").style.display=" none";
+ }
+
+/* let mouseCursor = document.querySelector('.cursor');
+
+ window.addEventListener('mousemove',cursor)
+
+ function cursor(e){
+     console.log(e);
+ } */
+
+    /* // insert the loading animation of the HTML
 const animationComponent = function () {
     return`
     
