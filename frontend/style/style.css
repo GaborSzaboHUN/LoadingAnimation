@@ -40,8 +40,6 @@ body {
 .animation-container {
   position: fixed;
   display: flex;
-  /* delete me */
-  display: none;
   height: 100vh;
   width: 100vw;
   background-color: black;
@@ -482,8 +480,6 @@ a.side-list {
   height: 100px;
   background-color: blue;
 }
-
-/*# sourceMappingURL=style.css.map */
 
 .about-text span {
   display: block;
