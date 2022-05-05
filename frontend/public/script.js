@@ -12,6 +12,8 @@ window.setTimeout("closeto100();", 6000);
 
 function closeto100() {
     document.getElementById("to100").style.display = " none";
+
+    /*document.getElementById("to100").classList.add('hide')*/
 }
 
 /* let mouseCursor = document.querySelector('.cursor');
