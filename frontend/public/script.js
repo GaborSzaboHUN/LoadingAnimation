@@ -30,20 +30,7 @@ function cursorHandler() {
 
 //akkor induljon az animáció, ha odascrolloztunk:
 
-function scrollmanagingthree() {
-    let three = document.getElementById("three")
-
-    let onscroll3 = function () {
-        let viewportBottom = window.scrollY + window.innerHeight
-
-        if (three.offsetTop + 400 < viewportBottom) {
-            three.classList.add("running")
-        }
-    }
-    document.addEventListener('scroll', onscroll3);
-}
-
-function scrollmanagingtwo() {
+function scrollManagingTwo() {
     let two = document.getElementById("two")
 
     let onscroll3 = function () {
@@ -51,6 +38,19 @@ function scrollmanagingtwo() {
 
         if (two.offsetTop + 500 < viewportBottom) {
             two.classList.add("running")
+        }
+    }
+    document.addEventListener('scroll', onscroll3);
+}
+
+function scrollManagingThree() {
+    let three = document.getElementById("three")
+
+    let onscroll3 = function () {
+        let viewportBottom = window.scrollY + window.innerHeight
+
+        if (three.offsetTop + 400 < viewportBottom) {
+            three.classList.add("running")
         }
     }
     document.addEventListener('scroll', onscroll3);
@@ -171,8 +171,8 @@ const loadEvent = function () {
     countingUp();
     cursorHandler();
 
-    scrollmanagingtwo()
-    scrollmanagingthree();
+    scrollManagingTwo();
+    scrollManagingThree();
 }
 
 window.addEventListener("load", loadEvent)
